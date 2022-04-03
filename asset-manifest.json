@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/restaurant/static/css/main.f8dab007.css",
+    "main.js": "/restaurant/static/js/main.5ab6fa02.js",
+    "static/media/map.png": "/restaurant/static/media/map.ed9c12e0e31023426547.png",
+    "static/media/menu3.jpg": "/restaurant/static/media/menu3.0a1bcf58187e753d2d85.jpg",
+    "static/media/cafe1.jpg": "/restaurant/static/media/cafe1.5a3ee52d95ef56abdec4.jpg",
+    "static/media/card.png": "/restaurant/static/media/card.10ca290b4d0ca2f0708b.png",
+    "static/media/basket_card.png": "/restaurant/static/media/basket_card.948b0be3116a781f7455.png",
+    "index.html": "/restaurant/index.html",
+    "main.f8dab007.css.map": "/restaurant/static/css/main.f8dab007.css.map",
+    "main.5ab6fa02.js.map": "/restaurant/static/js/main.5ab6fa02.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f8dab007.css",
+    "static/js/main.5ab6fa02.js"
+  ]
+}
