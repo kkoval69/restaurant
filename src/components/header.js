@@ -46,7 +46,7 @@ const Header = () => {
         <header className="header">
 
             <div className="logo">LOGOS</div>
-            <div >
+            <div className="search">
                 <i className="bi bi-geo-alt geo"></i>
                 <input
                     type="text"
@@ -57,14 +57,14 @@ const Header = () => {
                 />
                 <i className="bi bi-x-lg bi_clear" onClick={()=>setSearchValue('')}></i>
 
-
+                <div className="bi_search"  onClick={()=>searchHandler()}>Поиск</div>
             </div>
-            <div className="bi_search"  onClick={()=>searchHandler()}>Поиск</div>
             <div className="section">
                 <div className="tel" >
                     <div className="backphone">
                         <i className="bi bi-telephone phone"></i>
                     </div>
+
                     <div>
                         <p >Контакты:</p>
                         <p className="number">
@@ -72,7 +72,7 @@ const Header = () => {
                         </p>
                     </div>
                 </div>
-
+                <div className="line"></div>
                 <div className="sign"  onClick={()=> setModalActive(true)}>
                     <i className="bi bi-person user"></i>
                     <p>Войти</p>

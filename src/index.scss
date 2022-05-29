@@ -9,7 +9,6 @@
 *{
   margin: 0;
   padding: 0;
-
 }
 body{
   background-color:#393535 ;
@@ -39,95 +38,103 @@ body{
     line-height: 25px;
     letter-spacing: 0.15em;
   }
-
-  input{
-    background: #504B4A;
-    border-radius: 7px ;
-    width: 500px;
-    height: 40px;
-    border: 0;
-    color: #FFFFFF;
-    font-size: 15px;
-
-    &:focus {
+  .search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    input{
+      background: #504B4A;
+      border-radius: 7px ;
+      width: 460px;
+      height: 40px;
+      border: 0;
       color: #FFFFFF;
+      font-size: 15px;
+
+      &:focus {
+        color: #FFFFFF;
+        font-family: 'Gilroy',sans-serif;
+        font-style: normal;
+        font-weight: 100;
+        font-size: 15px;
+        line-height: 22px;
+
+      }
+    }
+    ::-webkit-input-placeholder,
+    ::-moz-placeholder,
+    :-moz-placeholder,
+    :-ms-input-placeholder { color:#FFFFFF;}
+    ::placeholder {
       font-family: 'Gilroy',sans-serif;
       font-style: normal;
       font-weight: 100;
       font-size: 15px;
       line-height: 22px;
-
+      color: #CFCFCF;
+      opacity: 1; /* Firefox */
     }
 
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      font-family: 'Gilroy',sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 21px;
+      color: #CFCFCF;
+    }
 
-  }
-  ::-webkit-input-placeholder,
-  ::-moz-placeholder,
-  :-moz-placeholder,
-  :-ms-input-placeholder { color:#FFFFFF;}
-  ::placeholder {
-    font-family: 'Gilroy',sans-serif;
-    font-style: normal;
-    font-weight: 100;
-    font-size: 15px;
-    line-height: 22px;
-    color: #CFCFCF;
-    opacity: 1; /* Firefox */
-  }
+    ::-ms-input-placeholder { /* Microsoft Edge */
+      font-family: 'Gilroy',sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 21px;
+      color: #CFCFCF;
+    }
 
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    font-family: 'Gilroy',sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 21px;
-    color: #CFCFCF;
-  }
+    .geo{
+      color: #CFCFCF;
+      width: 26px;
+      height: 26px;
+      line-height: 26px;
+      text-align: center;
+      margin-right: -28px;
+      position: relative;
+      z-index: 1;
+      float: left;
+      font-size: 16px;
+    }
+    .geo+input{
+      padding-left: 26px;
+    }
+    .bi_clear{
+      color: white;
+      margin-left: -25px;
+      cursor: pointer;
+    }
+    input+.bi_clear{
+      padding-right: 25px;
+    }
+    .bi_search{
+      font-family: sans-serif;
+      color: white;
+      width: 80px;
+      height: 30px;
+      background-color: #618967;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      cursor: pointer;
+      border: 1px solid #618967;
+      &:hover{
+        background-color: transparent;
 
-  ::-ms-input-placeholder { /* Microsoft Edge */
-    font-family: 'Gilroy',sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 21px;
-    color: #CFCFCF;
-  }
-
-  .geo{
-    color: #CFCFCF;
-    margin-top: 9px;
-    width: 26px;
-    height: 26px;
-    line-height: 26px;
-    text-align: center;
-    margin-right: -28px;
-    position: relative;
-    z-index: 1;
-    float: left;
-    font-size: 16px;
-  }
-  .geo+input{
-    padding-left: 26px;
-  }
-
-  .bi_search{
-    font-family: sans-serif;
-    color: white;
-    width: 80px;
-    height: 30px;
-    background-color: #618967;
-    margin-left: -100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    cursor: pointer;
-    border: 1px solid #618967;
-    &:hover{
-      background-color: transparent;
-
+      }
     }
   }
+
 
   .bi_clear{
     color: white;
@@ -140,9 +147,7 @@ body{
 
     .tel{
       display: flex;
-      margin-right: 50px;
-      margin-left: -100px;
-
+      justify-content: space-between;
       .backphone{
         background-color: #618967;
         border-radius: 69px;
@@ -171,9 +176,11 @@ body{
         font-size: 16px;
       }
     }
-    .sign{
+    .line{
       border-left: 1px solid #635C5A;
-      padding-left: 20px;
+      margin: 0px 10px;
+    }
+    .sign{
       margin:auto;
       display: flex;
       cursor: pointer;
@@ -349,12 +356,14 @@ body{
   }
 
   .cards{
+    height: 900px;
     margin-top: 100px;
-    display: flex;
-    flex-wrap: wrap;
     margin-left: 60px;
     margin-right: 60px;
-    justify-content:space-between;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow-y: auto;
 
     p{
       font-family: sans-serif;
@@ -375,12 +384,12 @@ body{
 
       .name_weight{
         display: flex;
-        justify-content: space-between;
-        margin-left: 20px;
-        margin-right: 16px;
         align-items: center;
+        width: 100%;
 
         .name{
+          padding: 0px 20px;
+          width: 80%;
           font-family: 'Gilroy',sans-serif;
           font-style: normal;
           font-weight: 700;
@@ -389,7 +398,9 @@ body{
           color: #FFFFFF;
         }
         .weight{
-
+          padding-right: 20px;
+          border-radius: 6px;
+          width: 20%;
           font-family: 'Gilroy',sans-serif;
           font-style: normal;
           font-weight: 400;
@@ -400,7 +411,7 @@ body{
       }
 
       .descriprion{
-        max-height: 34px;
+        max-height: 35px;
         margin-right: 20px;
         margin-left: 20px;
         font-family: 'Gilroy',sans-serif;
@@ -409,6 +420,7 @@ body{
         font-size: 13px;
         line-height: 17px;
         color: #CFCFCF;
+        overflow-y: auto;
       }
       .price_btn{
         display: flex;
@@ -466,22 +478,21 @@ body{
 
 .contact{
   height: 100%;
+
   .cafe{
     position: relative;
     margin: 40px;
     z-index: 100;
-    height: 610px;
-    background-image: url("./img/cafe1.jpg");
-
+    height: 570px;
+    background-image: linear-gradient(90deg, #211F20 15%, rgba(68, 64, 63, 0) 100%),url("./img/cafe1.jpg");
     .cafe_shadow {
-      height: 610px;
-      background: linear-gradient(90deg, #211F20 15%, rgba(68, 64, 63, 0) 100%);
       display: flex;
-
-
+      width: 100%;
+      height: 570px;
       .cafe_desc{
-        margin-left: 70px;
-        margin-top: 100px;
+        padding: 40px 40px;
+        width: 50%;
+
         .cafe_name{
           font-family: 'Gilroy',sans-serif;
           font-style: normal;
@@ -505,14 +516,15 @@ body{
       }
       .square{
         display: flex;
-        margin-left: 300px;
         flex-wrap: wrap;
-        margin-top: 40px;
+        align-items: center;
+        justify-content:center;
+        width: 50%;
         .square_content{
-          width: 250px;
-          height: 250px;
+          width: 40%;
+          height: 40%;
+          margin:0px  10px;
           background-color: #504b4a;
-          margin-left: 30px;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -547,6 +559,8 @@ body{
     }
 
     .map{
+      overflow-x:hidden;
+
       padding: 0;
       margin-top: -180px;
       z-index: -1;
@@ -766,4 +780,22 @@ footer{
       }
     }
   }
+}
+@media screen and (max-width: 1320px){
+  .square_content{
+
+  }
+
+}
+@media screen and (max-width: 1320px){
+
+
+}
+@media screen and (max-width: 1320px){
+
+
+}
+@media screen and (max-width: 1320px){
+
+
 }
